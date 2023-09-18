@@ -1,0 +1,31 @@
+<ons-page>
+
+    <ons-splitter var="splitter">
+        <ons-splitter-side side="left" width="220px" collapse swipeable>
+            <ons-page>
+                <ons-list>
+                    <ons-list-item style="background-color: black;" ng-click="app.load('views/home.html')" tappable>
+                        <span style="margin-left:35px;">
+                <img src="images/logo.png" alt="dcuts" height="100" width="110"/>
+            </span>
+                    </ons-list-item>
+                    <ons-list-item ng-click="app.load('views/home.html')" tappable>
+                        <ons-icon style="color: black;margin-right:10px;" icon="fa-video-camera"></ons-icon>
+                        Video Cuts <span ng-show="newVideosCount" class="badge badge-mod">{{newVideosCount}}</span>
+                    </ons-list-item>
+                    <ons-list-item ng-click="app.load('views/settings.html')" tappable>
+                        <ons-icon style="color: black;margin-right:10px;" icon="fa-headphones"></ons-icon>
+                        Audio Cuts <span ng-show="newAudiosCount" class="badge badge-mod">{{newAudiosCount}}</span>
+                    </ons-list-item>
+                    <ons-list-item ng-click="app.load('views/about.html')" tappable>
+                        <ons-icon style="color: black;margin-right:10px;" icon="fa-cutlery"></ons-icon>
+                        About
+                    </ons-list-item>
+                </ons-list>
+            </ons-page>
+        </ons-splitter-side>
+        <ons-splitter-content page="views/home.html"></ons-splitter-content>
+    </ons-splitter>
+
+
+</ons-page>

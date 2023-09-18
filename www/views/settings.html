@@ -1,0 +1,29 @@
+    <ons-page>
+      <ons-toolbar class="bar">
+        <div class="left">
+          <ons-toolbar-button ng-click="app.toggle()">
+            <!--<ons-icon icon="md-menu"></ons-icon>-->
+            <img src="images/logo.png" alt="dcuts" height="30" width="28"/>
+          </ons-toolbar-button>
+        </div>
+        <div class="center bar_title">
+          Audio cuts
+        </div>
+        <div class="right">
+          <ons-toolbar-button ng-click="app.logout()">
+            <ons-icon icon="fa-sign-out"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+      <div class="homeBody">
+        <img src="images/under_construction.png" alt="dcuts"  width="100%" style="margin-top:50px;"/>
+        <ons-bottom-toolbar style="height:80px;background: rgba(0, 0, 0, 0.8);">
+        <div style="text-align: center; line-height: 44px;margin-bottom:30px;">
+            <audio controls>
+                <source src="https://res.cloudinary.com/tamdilip/video/upload/v1498488887/RolexCDQMusic_1_qwrggp.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </ons-bottom-toolbar>
+      </div>
+    </ons-page>

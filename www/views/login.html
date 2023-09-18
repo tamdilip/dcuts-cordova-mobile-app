@@ -1,0 +1,178 @@
+<ons-navigator title="Navigator" var="loginNavigator">
+    <ons-page>
+
+        <div class="loginBody">
+            <div class="login-form">
+
+                <div class="imgcontainer">
+                    <img src="images/logo.png" alt="logo" class="logo">
+                </div>
+
+                <label><b>Email</b></label>
+                <input type="text" ng-model="logemail" placeholder="Enter Email" required>
+
+                <label><b>Password</b></label>
+                <input type="password" ng-model="logpass" placeholder="Enter Password" required>
+
+                <br><br>
+                <button ng-hide="!app.loader"><ons-icon size="25px" style="color:black;" spin icon="md-spinner"></ons-icon></button>
+                <button ng-show="!app.loader" ng-click="app.login(logemail,logpass)">Login</button>
+                <br><br>
+
+                <div>
+                    <button class="signbtn" onclick="loginNavigator.pushPage('signup.html', { animation : 'slide' } )">Signup</button>
+                    <span class="psw">Forgot <a ng-click="app.reset()">password?</a></span>
+                </div>
+            </div>
+
+        </div>
+    </ons-page>
+
+    <ons-template id="signup.html">
+        <ons-page>
+            <ons-toolbar class="bar">
+                <div class="left">
+                    <ons-back-button style="color:yellow;">Back</ons-back-button>
+                </div>
+                <div class="center" style="color:yellow;">Register</div>
+            </ons-toolbar>
+
+            <div class="signBody">
+
+                <form class="sign-form" name="myForm" novalidate>
+
+                    <label>Email:</label><br>
+                    <input type="email" name="email" ng-model="email" required>
+                    <span style="color:red" ng-show="app.emailCheck && !email">Email is required.</span>
+                    <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+<span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                    </span>
+                    </p>
+
+                    <label>Password:</label><br>
+                    <input type="password" name="pass" ng-model="pass" ng-minlength="6" required>
+                    <span style="color:red" ng-show="app.passCheck && !pass">Password is required.</span>
+                    <span style="color:red" ng-show="myForm.pass.$dirty && myForm.pass.$invalid">
+<span ng-show="!myForm.pass.$valid">Password is too short.</span>
+                    </span>
+                    </p>
+
+                    <p>
+                        <button class="signupBtn" ng-hide="!app.loader"><ons-icon size="25px" style="color:black;" spin icon="md-spinner"></ons-icon></button>
+                        <Button class="signupBtn" ng-show="!app.loader" ng-click="app.signup(email,pass)">Signup</Button>
+                    </p>
+
+                </form>
+
+
+            </div>
+        </ons-page>
+    </ons-template>
+</ons-navigator>
+
+
+<style>
+    button {
+        font-family: 'Permanent Marker', cursive;
+        background-color: #f0ff00;
+        color: black;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    button:hover {
+        opacity: 0.8;
+    }
+    
+    .signbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #e5c714;
+    }
+    
+    span.psw {
+        float: right;
+        padding-top: 16px;
+        color: #e5c714;
+    }
+    
+    span>a {
+        color: #e5c714;
+    }
+    
+    .loginBody {
+        font-family: 'Permanent Marker', cursive;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: black;
+        z-index: 10;
+    }
+    
+    .imgcontainer {
+        /*padding-top: 30px;*/
+        text-align: center;
+        position: relative;
+    }
+    
+    img.logo {
+        width: 60%;
+        border-radius: 25%;
+    }
+    
+    .login-form {
+        width: 80%;
+        margin: 60px auto 0;
+    }
+    
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    label {
+        text-align: left;
+        color: yellow;
+    }
+    
+    .signupBtn {
+        background-color: #f0ff00;
+        color: black;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    
+    .signupBtn:hover {
+        opacity: 0.8;
+    }
+    
+    .signBody {
+        font-family: 'Permanent Marker', cursive;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-color: black;
+        z-index: 10;
+    }
+    
+    .sign-form {
+        width: 80%;
+        margin: 60px auto 0;
+    }
+</style>

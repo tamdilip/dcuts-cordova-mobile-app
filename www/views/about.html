@@ -1,0 +1,61 @@
+<ons-page>
+    <ons-toolbar class="bar">
+        <div class="left">
+            <ons-toolbar-button ng-click="app.toggle()">
+                <!--<ons-icon icon="md-menu"></ons-icon>-->
+                <img src="images/logo.png" alt="dcuts" height="30" width="28" />
+            </ons-toolbar-button>
+        </div>
+        <div class="center bar_title">
+            About
+        </div>
+        <div class="right">
+            <ons-toolbar-button ng-click="app.logout()">
+                <ons-icon icon="fa-sign-out"></ons-icon>
+            </ons-toolbar-button>
+        </div>
+    </ons-toolbar>
+
+    <div class="aboutBody">
+
+        <input type="checkbox" id="pure-toggle" hidden/>
+        <label id="card-user" class="pure-toggle" for="pure-toggle">
+  <div class="header">
+  </div>
+  <div class="avatar">
+    <img src="images/about_dp.jpg" alt="dp">
+  </div>
+  <div class="text">
+    <h3>Dilipan Somasundaram</h3>
+    <h6>Developer/Editor</h6>
+
+  <div class="neon">#Dcuts </div>
+  <div class="neon"> 
+    <i class="fa fa-angle-double-down"></i>
+    <i class="fa fa-angle-double-down"></i>
+    <i class="fa fa-angle-double-down"></i>
+    <i class="fa fa-angle-double-down"></i>
+  </div>
+  
+  <div class="imgcontainer">
+        <img src="images/logo.png" alt="logo" class="logo">
+    </div>
+    <p>Hey peeps :)</p>
+    <p>Hope you all love and enjoy the app #Dcuts. Will keep you all posted and engaged. Follow my social space for more.</p>
+    <p>Cheers !!</p>
+    
+    <div class="social">
+    <i onclick="window.open('https://www.facebook.com/tamdilip', '_system', 'location=yes');" class="fa fa-facebook"></i>
+    <i onclick="window.open('https://www.youtube.com/user/5CubesCS', '_system', 'location=yes');" class="fa fa-youtube"></i>
+    <i onclick="window.open('https://www.instagram.com/insanely_its_me/', '_system', 'location=yes');" class="fa fa-instagram"></i>
+    <i onclick="window.open('https://twitter.com/DilipanSomu', '_system', 'location=yes');" class="fa fa-twitter"></i>
+    <i onclick="window.open('https://www.facebook.com/SenthamizhargalCreativeStudio', '_system', 'location=yes');" class="fa fa-thumbs-o-up"></i>
+    <i ng-click ="app.shareDialog()" class="fa fa-bullhorn"></i>
+  </div>
+  
+  </div>
+  
+  
+</div>
+     </div>
+    </ons-page>
